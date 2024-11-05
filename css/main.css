@@ -153,9 +153,11 @@ header .header_wrap {
       @media screen and (max-width: 1280px) {
          .service_icons .icon_wrap {width: 90%;}
       }
-
-      @media screen and (max-width: 1024px) {
-         .service_icons img {width: 6.5rem;margin-bottom: 1rem;}
+      
+      @media screen and (max-width: 767px) {
+         .service_icons .icon_wrap {width: 70%;}
+         .service_icons img {width: 4rem;margin-bottom: 1rem;}
+         .service_icons span {font-size: 1.6rem;}
          .service_icons p {display: none;}
       }
 
