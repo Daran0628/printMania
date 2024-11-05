@@ -500,11 +500,68 @@ li:nth-child(8) {grid-row: 2 / 4;grid-column: 4 / 6;}
 
 
 
+
+
+/*** section.reviews ***/
+
+.reviews .review_wrap {
+   display: flex;gap: 3rem;
+}
+.reviews .review_box {flex-grow: 1;}
+.reviews .img_box {display: block;height: 50rem;}
+.reviews .img_box.review_01 {
+   background: url(../img/products/item_04.png) no-repeat center;
+   background-size: contain;} 
+.reviews .img_box.review_02 {
+   background: url(../img/products/item_07.png) no-repeat center;
+   background-size: contain;} 
+.reviews .img_box.review_03 {
+   background: url(../img/products/item_08.png) no-repeat center;
+   background-size: contain;} 
+.reviews .img_box.review_04 {
+   background: url(../img/products/item_05.png) no-repeat center;
+   background-size: contain;} 
+.reviews .contents p {height: 3rem;background: blue;}
+.reviews .contents span {height: 3rem;background: gold;}
+.reviews .contents strong {height: 3rem;background: salmon;}
+.reviews .contents a {display: block;height: 3rem;background: lightskyblue;}
    /***  footer ***/
 
-footer {
-   padding: 0 5rem; 
-   border: 1px solid orange;color: orange;
-   margin-bottom: 50rem;}
-footer .footer_wrap {
-   border: 1px solid goldenrod;color: goldenrod}
+footer {margin-bottom: 50rem;}
+footer .footer_wrap {}
+footer .footer_business_info {
+   padding: 0 2%; 
+}
+
+footer .footer_nav_wrap {
+   display: flex;justify-content: space-between;align-items: center; 
+   height: 5rem;padding: 0 2%;
+   background: #F4F6FB;
+   font-size: 1.6rem;font-weight:700;color: #6980B4;}
+footer .footer_nav {
+   display: flex;justify-content: space-between;align-items: center;gap: 2.5rem;
+}
+footer .footer_nav li {position: relative;}
+footer .footer_nav li::after {
+   content: '';
+   display: block;
+   position: absolute;top: 50%;right: -1.2rem;
+   transform: translateY(-40%);
+   width: 2px;height: 1.3rem;
+   background: #6980B4;
+}
+footer .footer_nav li:last-child::after {
+   content: '';
+   display: none;
+}
+footer .footer_search {
+   display: flex;justify-content: center;align-items: center;gap: 1rem;
+   padding: 0.5rem 1.5rem;
+   border:1px solid #6980B4;
+   border-radius: 2rem;
+}
+footer input {display: block;width: 30rem;height: 2.5rem;}
+
+footer .footer_bottom {
+   padding: 0 2%;
+}
