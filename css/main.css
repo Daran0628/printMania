@@ -138,8 +138,8 @@ header .header_wrap {
       /* border: 1px solid blue */
    }
    .service_icons img {
-      width: 8rem;
-      margin-bottom: 2rem;}
+      width: 8rem;height: 8rem;
+      margin-bottom: 1rem;}
    .service_icons span {
       font-size: 1.8rem;font-weight: 700;color: #2F4F96;}
    .service_icons p {
@@ -150,12 +150,14 @@ header .header_wrap {
 
       /* * * @media section.service_icons * * */
 
-      @media screen and (max-width: 1280px) {
-         .service_icons .icon_wrap {width: 90%;}
+      @media screen and (max-width: 1024px) {
+         .service_icons .icon_wrap {width: 90%}
+         .service_icons p {font-size: 1.2rem;}
       }
-      
+
       @media screen and (max-width: 767px) {
-         .service_icons img {width: 4rem;margin-bottom: 1rem;}
+         .service_icons .icon_wrap {margin: 12rem auto;width: 100%;}
+         .service_icons img {width: 5.5rem;margin-bottom: 0;}
          .service_icons span {font-size: 1.8rem;}
          .service_icons p {display: none;}
       }
@@ -409,6 +411,23 @@ header .header_wrap {
    background-size: 95%;
 }
 .products_wrap .product_box .text_box {display: none;}
+
+
+
+
+/* * * @media section.products * * */
+
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 767px) {
+   .products .products_wrap {
+      display: flex;
+      gap: 1.5rem;
+   }
+   .products_wrap .product_box .text_box {display: none;}
+}
+
 
 
 
