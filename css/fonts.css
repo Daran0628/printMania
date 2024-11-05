@@ -1,6 +1,11 @@
 @charset "utf-8";
 
-/* 한글 SUIT */
+/* 한글 pretendard | SUIT */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
 @font-face {
   font-family: 'SUIT';
   src: url(../fonts/SUIT-Bold.woff2);
@@ -18,7 +23,10 @@
 }
 
 
-/* 영문 Montserrat */
+/* 영문 Fascinate | Inter Tight | Montserrat */
+
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap');
+
 @font-face {
   font-family: 'Montserrat';
   src: url(../fonts/Montserrat-Bold.woff2);
