@@ -507,25 +507,56 @@ li:nth-child(8) {grid-row: 2 / 4;grid-column: 4 / 6;}
 .reviews .review_wrap {
    display: flex;gap: 2rem;
 }
-.reviews .review_box {flex-grow: 1;}
+.reviews .review_box {width: calc(25% - 6rem / 3);}
 .reviews .img_box {display: block;height: 30rem;}
 .reviews .img_box.review_01 {
    background: url(../img/review/40448ba5ee5b401320662a785de67c58.jpg) no-repeat center;
    background-size: cover;} 
 .reviews .img_box.review_02 {
-   background: url(../img/review/da4304cbc51d63285ef678e059d97aea.jpg) no-repeat center;
+   background: url(../img/review/free-hardcover-dust-jacket-book-mockup-1.jpg) no-repeat center;
    background-size: cover;} 
 .reviews .img_box.review_03 {
-   background: url(../img/review/free-hardcover-dust-jacket-book-mockup-1.jpg) no-repeat center;
+   background: url(../img/review/da4304cbc51d63285ef678e059d97aea.jpg) no-repeat center;
    background-size: cover;} 
 .reviews .img_box.review_04 {
    background: url(../img/review/751b4c071de57e478e4060282fbdbbe1.jpg) no-repeat center;
-      background-size: cover;} 
-.reviews h3 {height: 3rem;font-weight: 700;}
-.reviews p {height: 3rem;}
-.reviews span {height: 3rem;background: gold;}
-.reviews strong {height: 3rem;background: salmon;}
-.reviews a {display: block;height: 3rem;background: lightskyblue;}
+      background-size: cover;}
+.reviews .contents {
+   display: flex;flex-direction: column;gap: 1.5rem;
+   padding: 2rem 1.5rem;}
+.reviews h3 {
+   position: relative;
+   margin-top: 1.5rem;
+   font-size: 1.8rem;font-weight: 600;}
+.reviews h3::before {
+   content: '';
+   display: block;
+   position: absolute;top: -2rem;left: 50%;transform: translateX(-50%);
+   width: 110%;height: 2px;
+   background: #8FBFFA;
+}
+.reviews p {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      width: 100%;height: 6rem;
+      font-size: 1.6rem;line-height: 2rem;
+      text-overflow: ellipsis;
+   }
+.reviews span {font-size: 1.6rem;}
+.reviews a {
+   position: relative;
+   width: 4.5rem;
+   font-size: 1.6rem;
+}
+.reviews a::after {
+   content: "";
+   display: block;
+   position:absolute;top: 0;right: -1.5rem;
+   width: 2rem;height: 2rem;
+   background: url(../img/icon_arrow_black_line.svg) no-repeat center;
+}
 
 
 
@@ -534,29 +565,36 @@ li:nth-child(8) {grid-row: 2 / 4;grid-column: 4 / 6;}
 @media screen and (max-width: 767px) {
    .reviews .review_wrap {gap: 1rem;padding-left: 1rem;}
    .reviews .review_box {
-      display: flex;align-items: center;gap: 1.5rem;
+      display: flex;align-items: center;gap: 1.8rem;
       flex-shrink: 0;
-      width: 35rem;height: 12rem;
+      width: 37rem;height: 15rem;
       padding: 1.5rem;
       border: 1px solid lightgrey;
       border-radius: 0.5rem;
    }
    .reviews .img_box {
-      width: 9rem;height: 9rem;
+      width: 10rem;height: 10rem;
       border-radius: 1rem;
    }
-   .reviews h3 {font-size: 1.8rem;}
+   .reviews .contents {
+      flex-grow: 1;
+      height: 8rem;padding: 0;
+      position: relative;}
+   .reviews h3 {margin-top: 0;font-size: 1.8rem;font-weight: 600;}
+   .reviews h3::before {display: none;}
    .reviews p {
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 3;
       overflow: hidden;
-      width: 20rem;height: 4.5rem;
+      position: absolute;bottom: 0;left: 0;
+      width: 100%;height: 4.5rem;
       font-size: 1.6rem;line-height: 1.5rem;
       text-overflow: ellipsis;
    }
    .reviews span {display: none;}
    .reviews a {display: none;}
+   
 }
 
 
@@ -576,6 +614,12 @@ li:nth-child(8) {grid-row: 2 / 4;grid-column: 4 / 6;}
 
 .contact .api_map {width: 45%;height: 50rem;background: url(../img/map.png)}
 
+
+
+
+@media screen and (max-width: 767px) {
+   .contact {display: none;}
+}
 
 
 
@@ -599,8 +643,8 @@ footer .footer_nav li {position: relative;}
 footer .footer_nav li::after {
    content: '';
    display: block;
-   position: absolute;top: 50%;right: -1.2rem;
-   transform: translateY(-40%);
+   position: absolute;top: 50%;right: -1.3rem;
+   transform: translateY(-45%);
    width: 2px;height: 1.3rem;
    background: #6980B4;
 }
@@ -612,9 +656,10 @@ footer .footer_search {
    display: flex;justify-content: center;align-items: center;gap: 1rem;
    padding: 0.5rem 1.5rem;
    border:1px solid #6980B4;
+   background: #fff;
    border-radius: 2rem;
 }
-footer input {display: block;width: 30rem;height: 2.5rem;}
+footer input {display: block;width: 30rem;height: 2.5rem;font-weight: 400;}
 
 footer .footer_bottom {
    padding: 0 2%;
