@@ -505,26 +505,80 @@ li:nth-child(8) {grid-row: 2 / 4;grid-column: 4 / 6;}
 /*** section.reviews ***/
 
 .reviews .review_wrap {
-   display: flex;gap: 3rem;
+   display: flex;gap: 2rem;
 }
 .reviews .review_box {flex-grow: 1;}
-.reviews .img_box {display: block;height: 50rem;}
+.reviews .img_box {display: block;height: 30rem;}
 .reviews .img_box.review_01 {
-   background: url(../img/products/item_04.png) no-repeat center;
-   background-size: contain;} 
+   background: url(../img/review/40448ba5ee5b401320662a785de67c58.jpg) no-repeat center;
+   background-size: cover;} 
 .reviews .img_box.review_02 {
-   background: url(../img/products/item_07.png) no-repeat center;
-   background-size: contain;} 
+   background: url(../img/review/da4304cbc51d63285ef678e059d97aea.jpg) no-repeat center;
+   background-size: cover;} 
 .reviews .img_box.review_03 {
-   background: url(../img/products/item_08.png) no-repeat center;
-   background-size: contain;} 
+   background: url(../img/review/free-hardcover-dust-jacket-book-mockup-1.jpg) no-repeat center;
+   background-size: cover;} 
 .reviews .img_box.review_04 {
-   background: url(../img/products/item_05.png) no-repeat center;
-   background-size: contain;} 
-.reviews .contents p {height: 3rem;background: blue;}
-.reviews .contents span {height: 3rem;background: gold;}
-.reviews .contents strong {height: 3rem;background: salmon;}
-.reviews .contents a {display: block;height: 3rem;background: lightskyblue;}
+   background: url(../img/review/751b4c071de57e478e4060282fbdbbe1.jpg) no-repeat center;
+      background-size: cover;} 
+.reviews h3 {height: 3rem;font-weight: 700;}
+.reviews p {height: 3rem;}
+.reviews span {height: 3rem;background: gold;}
+.reviews strong {height: 3rem;background: salmon;}
+.reviews a {display: block;height: 3rem;background: lightskyblue;}
+
+
+
+
+/* * * @media section.reviews * * */
+@media screen and (max-width: 767px) {
+   .reviews .review_wrap {gap: 1rem;padding-left: 1rem;}
+   .reviews .review_box {
+      display: flex;align-items: center;gap: 1.5rem;
+      flex-shrink: 0;
+      width: 35rem;height: 12rem;
+      padding: 1.5rem;
+      border: 1px solid lightgrey;
+      border-radius: 0.5rem;
+   }
+   .reviews .img_box {
+      width: 9rem;height: 9rem;
+      border-radius: 1rem;
+   }
+   .reviews h3 {font-size: 1.8rem;}
+   .reviews p {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      width: 20rem;height: 4.5rem;
+      font-size: 1.6rem;line-height: 1.5rem;
+      text-overflow: ellipsis;
+   }
+   .reviews span {display: none;}
+   .reviews a {display: none;}
+}
+
+
+
+   /*** section.contact ***/
+.contact .contact_wrap {display: flex;justify-content: center;align-items: center;gap: 2rem;}
+.contact .contact_info_box {
+   display: flex;flex-direction: column;
+   gap: 5rem;
+   width: calc(55% - 2rem);height: 50rem;
+   padding: 5rem;
+   background: lightblue;}
+.contact h4 {font-size: 3.2rem;font-weight: 500;}
+.contact p {font-size: 2rem;font-weight: 600}
+.contact ul {padding: 2rem 2.5rem;font-size: 2.4rem;}
+.contact ul li {}
+
+.contact .api_map {width: 45%;height: 50rem;background: url(../img/map.png)}
+
+
+
+
    /***  footer ***/
 
 footer {margin-bottom: 50rem;}
