@@ -157,8 +157,8 @@ header .header_wrap {
 
       @media screen and (max-width: 767px) {
          .service_icons .icon_wrap {margin: 12rem auto;width: 100%;}
-         .service_icons img {width: 5.5rem;margin-bottom: 0;}
-         .service_icons span {font-size: 1.8rem;}
+         .service_icons img {width: 5.2rem;margin-bottom: 0;}
+         .service_icons span {font-size: 1.6rem;letter-spacing: -1px;}
          .service_icons p {display: none;}
       }
 
@@ -703,7 +703,7 @@ footer .icon_sns li {
    border: 1px solid #DDE6FA;
    border-radius: 50%;
 }
-
+footer .footer_mobile {display: none;}
 
 
 
@@ -716,13 +716,21 @@ footer .icon_sns li {
 
    footer .footer_nav_wrap {
       position: relative;
-      margin-top: 15rem;
+      width: 100%;
+      margin-top: 15rem;padding: 0 1rem;
    }
    footer .footer_nav {
-   gap: 0.7rem;width: 100%;
-   font-size: 1.6rem;font-weight: 400;letter-spacing: -0.1rem;}
+   gap: 0.5rem;
+   width: 100%;
+   font-size: 1.6rem;font-weight: 400;letter-spacing: -0.2rem;
+   }
    footer .footer_nav li::after {display: none;}
    footer .footer_search {
       position: absolute;top: -6.5rem;left: 50%;transform: translateX(-50%);
    }
-}
+
+   footer .footer_mobile {
+      display: block;
+      font-size: 1.6rem;font-weight: 400;text-align: center;}
+   footer .footer_mobile i {font-size: 2rem;}
+   }
