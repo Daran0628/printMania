@@ -258,8 +258,6 @@ header .header_wrap {
    .main_service .service_img_box {
       padding-top: 65%;
    }
-   .main_service .service_img_box.b {
-      background: url(../img/service_b_b.png) no-repeat center;}
 
    .main_service .service_text_box {
       position: absolute;bottom: -7rem;left: 50%;transform: translateX(-50%);
@@ -413,7 +411,7 @@ li:nth-child(8) {grid-row: 2 / 4;grid-column: 4 / 6;}
 
 
 .process_orders .order_wrap {display: flex;gap: 2rem; width: 100%;}
-.process_orders ul {width: calc(50% - 1rem);height: 65rem;border:1px solid lightcoral;overflow: hidden;}
+.process_orders ul {width: calc(50% - 1rem);height: 65rem;overflow: hidden;}
 
 .process_orders li {display: none;width: 100%;}
 .process_orders .show {display: block;}
@@ -596,7 +594,7 @@ li:nth-child(8) {grid-row: 2 / 4;grid-column: 4 / 6;}
 
    /*** footer ***/
 
-footer {margin-bottom: 50rem; } 
+footer {margin-bottom: 5rem; } 
 footer .footer_mobile {display: none;}
 footer .footer_business_info {
    display: flex;align-items: flex-start;
