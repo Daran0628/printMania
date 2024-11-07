@@ -626,7 +626,7 @@ li:nth-child(8) {grid-row: 2 / 4;grid-column: 4 / 6;}
    /*** footer ***/
 
 footer {margin-bottom: 50rem; } 
-
+footer .footer_mobile {display: none;}
 footer .footer_business_info {
    display: flex;align-items: flex-start;
    padding: 2.5rem 2%;
@@ -685,25 +685,28 @@ footer .footer_bottom_wrap {display: flex;}
 footer .footer_logo {
    display: flex;flex-direction: column;justify-content: center;align-items: center;
    height: 10rem;
-   flex-grow: 1;background: lightcyan;}
+   flex-grow: 1;}
 footer .footer_contents {
    display: flex;flex-direction: column;justify-content: center;gap: 0.5rem;
-   background: lightcyan;}
+   }
 footer .footer_contents>p {font-size: 1.6rem;font-weight: 700;}
 footer .footer_contact_info {
    display: flex;flex-wrap: wrap;column-gap: 2.5rem;
    width: 60rem;}
+footer .footer_contact_info span {font-weight: 600;}
 footer .footer_contact_info p, footer .footer_contact_info address {flex-shrink: 0;}
-footer .footer_icons {display: flex;flex-grow: 1;}
-footer .icon_sns {display: flex;}
+footer .footer_icons {
+   display: flex;flex-grow: 1;
+   justify-content: center;align-items: center;
+}
+footer .icon_sns {display: flex;gap: 2rem;}
 footer .icon_sns li {
    display: flex;justify-content: center;align-items: center;
    width: 5rem;height: 5rem;
    padding: .5rem;
-   border: 1px solid #DDE6FA;
+   border: 1px solid #6980B4;
    border-radius: 50%;
 }
-footer .footer_mobile {display: none;}
 
 
 
@@ -712,6 +715,7 @@ footer .footer_mobile {display: none;}
 
 
 @media screen and (max-width: 767px) {
+   footer {position: relative;}
    footer .footer_business_info {display: none;}
 
    footer .footer_nav_wrap {
@@ -729,8 +733,34 @@ footer .footer_mobile {display: none;}
       position: absolute;top: -6.5rem;left: 50%;transform: translateX(-50%);
    }
 
+   footer .footer_bottom .inner {background: #F4F6FB;color: #6980B4;}
    footer .footer_mobile {
       display: block;
       font-size: 1.6rem;font-weight: 400;text-align: center;}
    footer .footer_mobile i {font-size: 2rem;}
+   footer .footer_bottom_wrap {flex-direction: column;}
+   footer .footer_contents {
+      display: none;
+      font-size: 1.6rem;
+   }
+   footer .footer_logo {height: auto;}
+   footer .footer_logo img {display: none;}
+   footer .copyright {
+      position: absolute;bottom: 0.5rem;left: 50%;transform: translateX(-50%);
+   }
+   .footer_contents>p {display: none;}
+   footer .footer_contact_info {
+      flex-direction: column;align-items: center;
+      width: 95%;margin: auto;
+   }
+   footer address {display: none;}
+   }
+
+   footer .footer_icons {
+      margin: 2.5rem 0;
+   }
+   footer .icon_sns {gap: 0;}
+   footer .icon_sns li {
+      border-radius: none;
+      border: none;
    }
