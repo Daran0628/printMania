@@ -19,9 +19,16 @@ h2 {font-size: 3rem;}
 /* section {border: 1px solid steelblue}  */
 /* 구조 확인 후 삭제 */
 h2 {font-size: 2.5rem;text-align: center;}
+.h2_mobile {display: none;}
 
 @media screen and (max-width: 767px) {
    .inner {width: 100%;}
+   h2 {display: none;}
+   .h2_mobile {
+      display: block;
+      padding-left: 1rem;
+      font-size: 2rem;text-align: left;
+   }
 }
 
 
@@ -173,9 +180,7 @@ header .header_wrap {
    .main_service_wrap {
       display: flex;gap: 3.5rem;
       width: 100%;}
-   .main_service_wrap .service_box {
-      width: 100%;height: auto;
-      border: 1px solid lightskyblue}
+   .main_service .service_box {width: 100%;height: auto;}
 
    .service_img_box.a {
       background: url(../img/service_a.png) no-repeat center;}
@@ -184,7 +189,7 @@ header .header_wrap {
    .service_img_box.c {
       background: url(../img/service_c.png) no-repeat center;}
    
-   .service_box .service_img_box {
+   .main_service .service_img_box {
       display: block;
       position: relative;
       width: 100%;
@@ -193,7 +198,7 @@ header .header_wrap {
       margin-bottom: 1.5rem;
    }
 
-   .service_img_box .service_text_box {
+   .main_service .service_text_box {
       position: absolute;bottom: 0;
       width: 100%;height: 45%;
       padding: 5rem 2.5rem 0 2.5rem;
@@ -201,16 +206,16 @@ header .header_wrap {
       /* border: 1px solid red; */
       color: #fff;
    }
-   .service_img_box .service_text_box span {
+   .main_service .service_text_box span {
       font-size: 2.6rem;font-weight: 700;}
-   .service_img_box .service_text_box p {
+   .main_service .service_text_box p {
       font-size: 1.8rem;line-height: 3rem;}
-   .service_img_box .service_text_box a {
+   .main_service .service_text_box a {
       position: absolute;bottom: 5rem;
       font-size: 1.8rem;
       text-decoration: underline 0.1rem;text-underline-offset: 0.4rem;
-   }                 
-   .service_img_box .service_text_box a::after {
+   }        
+   .main_service .service_text_box a::after {
       content: '';
       display: block;
       position: absolute;right: -1rem;top: 50%;
@@ -220,7 +225,7 @@ header .header_wrap {
       background-size: cover;
    }
    .service_text_box.mobile {display: none;}
-
+   .main_service .p_mobile {display: none;}
 
    .item_img_list {
       display: flex;gap: 1.5rem;
@@ -241,98 +246,45 @@ header .header_wrap {
 /* * * @media section.main_service * * */
 
 
-
-@media screen and (max-width: 1440px) {
-   .main_service_wrap {gap: 3rem;}
-   .service_img_box .service_text_box {
-      padding: 4rem 2rem 0 2rem;
-      background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
-      /* border: 1px solid red; */
-      color: #fff;
-   }
-   .service_img_box .service_text_box span {
-      font-size: 2.4rem;font-weight: 600;}
-   .service_img_box .service_text_box p {
-      font-size: 1.6rem;
-      /* letter-spacing: -0.1rem; */
-   }
-}
-   .service_img_box .service_text_box a {
-      bottom: 4rem;}
-
-@media screen and (max-width: 1280px) {
-   .main_service_wrap {gap: 2.5rem;}
-   .service_img_box .service_text_box span {
-      font-size: 2.4rem;font-weight: 600;}
-   .service_img_box .service_text_box p {font-size: 1.6rem;letter-spacing: -0.1rem;}
-   .service_img_box .service_text_box a {font-size: 1.6rem;bottom: 3rem;text-underline-offset: 0.3rem;}
-}
-.service_img_box .service_text_box a::after {
-   width: 0.9rem;height: 0.9rem;
-   transform: translateY(-20%);
-}
-@media screen and (max-width: 1024px) {
-   .main_service_wrap {gap: 1.5rem;}
-   .service_img_box .service_text_box {padding: 3rem 1.3rem 0 1.3rem;}
-   .service_img_box .service_text_box span {
-      font-size: 2rem;font-weight: 600;}
-   .service_img_box .service_text_box p {font-size: 1.4rem;line-height: 2rem;letter-spacing: -0.135rem;}
-   .service_img_box .service_text_box a {font-size: 1.4rem;bottom: 2rem;text-underline-offset: 0.2rem;}
-   .service_img_box .service_text_box a::after {
-      right: -0.8rem;
-      width: 0.8rem;height: 0.8rem;
-      transform: translateY(-15%);}
-}
 @media screen and (max-width: 767px) {
-   .main_service .inner h2 {display: none;}
+   .main_service h2 {display: none;}
    .main_service_wrap {
-      display: block;
-      width: 100%;
-      }
-   .main_service_wrap .service_box {
-      width: 100%;height: auto;
-      padding: 1.8rem;
-      padding-bottom: 5rem;
+      display: flex;flex-direction: column;gap: 2.5rem;
+   }
+   .main_service .service_box {
+      height: 40rem;padding: 1.5rem;
       background: #F6F7F8;
    }
-   
-   .service_img_box.a {
-      background: url(../img/service_a_a.png) no-repeat center;}
-   .service_img_box.b {
-      background: url(../img/service_b_b.png) no-repeat center;}
-   .service_img_box.c {
-      background: url(../img/service_c_c.png) no-repeat center;}
-   .main_service_wrap .service_box .service_img_box {
-      width: 100%;
-      padding-top: 63%;
-      background-size: cover;
-      margin: 0;
+   .main_service .service_img_box {
+      padding-top: 65%;
    }
-   .service_img_box .service_text_box {display: none;}
-   .service_text_box.mobile {
-      display: block;
-      height: 25rem;
-      position: relative;
-      padding: 2.5rem 3rem 5rem 3rem;
-      border: 1px dotted coral;
+   .main_service .service_img_box.b {
+      background: url(../img/service_b_b.png) no-repeat center;}
+
+   .main_service .service_text_box {
+      position: absolute;bottom: -7rem;left: 50%;transform: translateX(-50%);
+      height: 5rem;padding: 0 2rem;
+      background: none;
       color: black;
    }
-   .service_text_box.mobile span {font-size: 2rem;font-weight: 600;}
-   .service_text_box.mobile p {padding-top: 1rem;font-size: 1.6rem;}
-   .service_text_box.mobile a {
+   .main_service .service_text_box span {font-size: 2rem;font-weight: 400;}
+   .main_service .service_text_box p {display: none;}
+   .main_service .service_text_box .p_mobile {
       display: block;
-      position: absolute;left: 4.2rem;bottom: 7rem;
-      font-size: 1.4rem;color: blue;
-   }
-   .service_text_box.mobile a::before {
+      margin-top: 1.5rem;
+      font-size: 1.6rem;line-height: 1.8rem;}
+   .main_service .service_text_box a {position: absolute;bottom: -7rem;color:rgb(25, 25, 233);}
+   .main_service .service_text_box a::after {
       content: '';
       display: block;
-      position: absolute;left: -1.2rem;top: 50%;
-      transform: translateY(-50%);
+      position: absolute;right: -1rem;top: 50%;
+      transform: translateY(-30%);
       width: 1rem;height: 1rem;
       background: url(../img/icon_arrow_blue_line.svg) no-repeat center;
-      }
-   .item_img_list {display: none;}
+      background-size: cover;
+   }
+
+   .main_service .item_img_list {display: none;}
 }
 
 
@@ -463,9 +415,9 @@ li:nth-child(8) {grid-row: 2 / 4;grid-column: 4 / 6;}
 .process_orders .order_wrap {display: flex;gap: 2rem; width: 100%;}
 .process_orders ul {width: calc(50% - 1rem);height: 65rem;border:1px solid lightcoral;overflow: hidden;}
 
-.process_orders li {display: none;}
+.process_orders li {display: none;width: 100%;}
 .process_orders .show {display: block;}
-.process_orders .order_img img {display: block;}
+.process_orders .order_img img {display: block;width: 100%;height: 100%;}
 
 .process_orders .order_step {
    display: flex;flex-direction: column;
@@ -480,24 +432,25 @@ li:nth-child(8) {grid-row: 2 / 4;grid-column: 4 / 6;}
    border-top: 1px solid #000;
 }
 .process_orders .order_step span {
-   font-size: 2rem;font-weight: 600;}
-.process_orders .title {
-   position: absolute;top: 2.5rem;right: 3rem;
-   width: 1.7rem;height: 1.7rem;
+   display: block;
+   margin-bottom: 0.5rem;
+   font-size: 2.2rem;font-weight: 600;
+   /* background: salmon; */
+}
+.process_orders .title_button {
+   position: absolute;top: 2.5rem;right: 2.5rem;
+   width: 2rem;height: 2rem;
    transform: rotate(90deg);
    }
-.process_orders .step_title p {font-size: 1.6rem;}
+.process_orders p {font-size: 1.8rem;}
 
 .process_orders .step_detail p {
-   height: 13rem;background: lightgrey;
+   height: 11rem;
+   padding: 1rem 0;
 }
 
 
-@media screen and (max-width: 767px) {
-   .process_orders {display: none;}
-}
-
-.process_orders .title.show {transform: rotate(-180deg);}
+.process_orders .title_button.show {transform: rotate(-180deg);}
 .process_orders .order_step {font-size: 1.6rem;}
 .process_orders .step_detail {display: none;}
 .process_orders .step_detail.show {display: block;font-size: 1.6rem;}
@@ -505,6 +458,10 @@ li:nth-child(8) {grid-row: 2 / 4;grid-column: 4 / 6;}
 
 
 
+
+@media screen and (max-width: 767px) {
+   .process_orders {display: none;}
+}
 
 
 /*** section.reviews ***/
