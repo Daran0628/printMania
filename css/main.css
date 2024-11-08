@@ -3,7 +3,7 @@
 
    /* common */
 
-html {font-family: 'pretendard', 'Noto Sans KR', 'Fascinate', 'Inter Tight', 'Montserrat', 'Pacifico';font-size: 10px;}
+html {font-family: 'pretendard', 'Noto Sans KR', 'Fascinate', 'Inter Tight', 'Montserrat', 'Pacifico', 'Sunflower' ;font-size: 10px;}
 body {font-size: 1.4rem;}
 h2 {font-size: 3rem;}
 
@@ -17,7 +17,7 @@ h2 {font-size: 3rem;}
 
 /* section {border: 1px solid steelblue}  */
 /* 구조 확인 후 삭제 */
-h2 {font-family: 'Inter Tight';
+h2 {font-family: 'Sunflower';
    font-size: 2.5rem;text-align: center;}
 .h2_mobile {display: none;}
 
@@ -52,19 +52,40 @@ header .header_wrap {
    .header_wrap h1 {
       position: absolute;left: 0;top: 50%;
       transform: translateY(-60%);
-      width: 20.5rem;height: 3.5rem;
-      background: url(../img/logo_printMania.png) center no-repeat;
       /* border: 2px dotted red; */
    }
-/* .header_wrap h1 a {background: gray;} */
+   .header_wrap h1 a {
+      display: block;
+      width: 20.5rem;height: 3.5rem;
+      background: url(../img/logo_printMania.png) center no-repeat;
+   }
 .header_wrap nav ul {
+   font-family: "Noto Sans KR";
    display: flex;gap: 2.5rem;
    margin-top: 0.3rem;
-   font-size: 2rem;font-weight: 600;}
+   font-size: 2rem;font-weight: 500;}
    .header_wrap nav li {
-   text-align: center;
+      position: relative;
+      text-align: center;
    /* border: 1px solid rgba(250,118,114,0.3); */
 }
+.header_wrap nav .depth_2 {
+   display: none;flex-direction: column;
+   position: absolute;left: 50%;transform: translateX(-50%);top: 3.7rem;
+   padding: 2rem 1rem;
+   background: rgba(255,255,255,0.4);
+   backdrop-filter: blur(10px);
+   /* border: 1px solid #fff; */
+}
+.header_wrap nav .depth_2 li {
+   width: 15rem;
+}
+
+
+
+
+
+
 .header_wrap .user_util {
    display: flex;gap: 2rem;
    position: absolute;right: 0;top: 50%;
