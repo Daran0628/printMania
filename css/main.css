@@ -3,9 +3,8 @@
 
    /* common */
 
-html {font-family: 'pretendard';font-size: 10px;}
+html {font-family: 'pretendard', 'Noto Sans KR', 'Fascinate', 'Inter Tight', 'Montserrat', 'Pacifico';font-size: 10px;}
 body {font-size: 1.4rem;}
-h1 {font-size: 3rem;}
 h2 {font-size: 3rem;}
 
 .blind {display: block;width: 0;height: 0;overflow: hidden;}
@@ -18,7 +17,8 @@ h2 {font-size: 3rem;}
 
 /* section {border: 1px solid steelblue}  */
 /* 구조 확인 후 삭제 */
-h2 {font-size: 2.5rem;text-align: center;}
+h2 {font-family: 'Inter Tight';
+   font-size: 2.5rem;text-align: center;}
 .h2_mobile {display: none;}
 
 @media screen and (max-width: 767px) {
@@ -33,29 +33,28 @@ h2 {font-size: 2.5rem;text-align: center;}
 
 
 
-
-
-
+#main_wrap {position: relative;}
 
    /*** header ***/
    
 
-
 header {
-   padding: 0 2%; 
+   position: absolute;top: 0;
+   width: 100%;padding: 0 2%;z-index: 9999;
 }
 header .header_wrap {
    display: flex;justify-content: center;align-items: center;
    position: relative;
    height: 5.5rem;
    margin-top: 1rem; 
-   /* border: 1px solid goldenrod; */
+   /* border: 1px solid black; */
 }
    .header_wrap h1 {
       position: absolute;left: 0;top: 50%;
       transform: translateY(-60%);
+      width: 20.5rem;height: 3.5rem;
+      background: url(../img/logo_printMania.png) center no-repeat;
       /* border: 2px dotted red; */
-      font-weight: 900;
    }
 /* .header_wrap h1 a {background: gray;} */
 .header_wrap nav ul {
@@ -67,7 +66,7 @@ header .header_wrap {
    /* border: 1px solid rgba(250,118,114,0.3); */
 }
 .header_wrap .user_util {
-   display: flex;gap: 1rem;
+   display: flex;gap: 2rem;
    position: absolute;right: 0;top: 50%;
    transform: translateY(-60%);
 }
@@ -84,7 +83,12 @@ header .header_wrap {
    /* border: 2px solid rgba(250,118,114,0.3); */
 }
 
-.header_wrap .mobile_menu {display: none;}
+header .mobile_menu {display: none;}
+header .blur_bg {
+   position: absolute;left: 0;right: 0;top: 0;bottom: 0;z-index: -1;
+   background: rgba(255,255,255,0.4);
+   backdrop-filter: blur(10px);
+} 
 
 
 
@@ -121,11 +125,63 @@ header .header_wrap {
    }
 }
 @media screen and (max-width: 767px) {
+   header {
+      position: static;
+      width: 100%;padding: 0 2%;
+      background: none;
+   }
    .header_wrap h1 {font-size: 2.4rem;}
    .header_wrap .mobile_menu, .header_wrap .user_util .search, .header_wrap .user_util .login {
       width: 2.4rem;height: 2.4rem;
    }
 }
+
+
+
+
+
+   /*** section.main_visual ***/
+   
+   .main_visual {
+      position: relative;
+      width: 100vw;height: 95vh;}
+   .main_visual .main_visual_container {
+      width: 100%;height: 100%;
+      overflow: hidden;
+   }
+   .main_visual .main_visual_bg {
+      display: flex;height: 100%;
+   }
+   .main_visual li {
+      flex-shrink: 0;width: 100vw;background: center / cover no-repeat;}
+   .main_visual li:nth-child(1) {background-image: url(../img/main_visual_06.gif);}
+   .main_visual li:nth-child(2) {background-image: url(../img/main_visual_03.jpg);}
+   .main_visual li:nth-child(3) {background-image: url(../img/main_visual_01.jpg);}
+   .main_visual li:nth-child(4) {background-image: url(../img/main_visual_04.jpg);}
+   .main_visual li:nth-child(5) {background-image: url(../img/main_visual_02.jpg);}
+
+   .main_visual .main_visual_pagination {
+      position: absolute;left: 50%;bottom: 10rem;
+      transform: translateX(-50%);
+      height: 3rem;background: blue;}
+
+
+
+
+
+
+   /* * * @media section.main_visual * * */
+
+   
+   @media screen and (max-width: 767px) {
+      .main_visual {width: 100vw;height: 50rem;}
+      .main_visual .main_visual_pagination {
+         position: static;
+         transform: translateX(0);
+         height: 3rem;background: salmon;
+         text-align: center;
+      }
+   }
 
 
 
