@@ -68,7 +68,15 @@
                </ul>
             </nav>
             <div class="user_util">
-               <div class="search"></div>
+               <button class="search open" type="button"></button>
+               <div class="search_modal">
+                  <form action="#">
+                     <input type="text" placeholder="프린트 매니아에서 검색하기">
+                     <button class="search" type="submit"></button>
+                  </form>
+                  <button class="search_close" type='button'><i class="ri-close-large-line"></i></button>
+                  
+               </div>
                <div class="login"></div>
             </div>
          </div>
@@ -503,7 +511,7 @@
    </div>
 
    <!-- js -->
-   <script src="./js/main.js"></script>
    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script src="./js/main.js"></script>
 </body>
 </html>

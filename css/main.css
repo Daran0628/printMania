@@ -49,56 +49,78 @@ header .header_wrap {
    margin-top: 1rem; 
    /* border: 1px solid black; */
 }
-   .header_wrap h1 {
+header h1 {
       position: absolute;left: 0;top: 50%;
       transform: translateY(-60%);
       /* border: 2px dotted red; */
    }
-   .header_wrap h1 a {
+header h1 a {
       display: block;
       width: 20.5rem;height: 3.5rem;
       background: url(../img/logo_printMania.png) center no-repeat;
    }
-.header_wrap nav ul {
+header .gnb {
    font-family: "Noto Sans KR";
    display: flex;gap: 2.5rem;
-   margin-top: 0.3rem;
-   font-size: 2rem;font-weight: 500;}
-   .header_wrap nav li {
-      position: relative;
-      text-align: center;
+   /* margin-top: 0.3rem; */
+   font-size: 2rem;font-weight: 500;
+}
+header .gnb li { 
+   position: relative;
+   width: 10rem;
+   text-align: center;
    /* border: 1px solid rgba(250,118,114,0.3); */
 }
-.header_wrap nav .depth_2 {
-   display: none;flex-direction: column;
-   position: absolute;left: 50%;transform: translateX(-50%);top: 3.7rem;
+
+header .depth_2 {
+   display: none;flex-direction: column;gap: 1.5rem;
+   position: absolute;left: 50%;transform: translateX(-50%);top: 4rem;
    padding: 2rem 1rem;
    background: rgba(255,255,255,0.4);
    backdrop-filter: blur(10px);
-   /* border: 1px solid #fff; */
 }
-.header_wrap nav .depth_2 li {
-   width: 15rem;
+header .depth_2 li {
+   width: 13.5rem;
+   font-size: 1.8rem;
 }
+header .depth_2 li:hover {
+   font-weight: 400;
+   text-decoration: underline;text-underline-offset: 3px;}
 
 
 
 
 
-
-.header_wrap .user_util {
+header .user_util {
    display: flex;gap: 2rem;
    position: absolute;right: 0;top: 50%;
    transform: translateY(-60%);
 }
-.header_wrap .user_util .search {
-   width: 3rem;height: 3rem;
-   background: url(../img/search.svg) no-repeat center;
-   background-size: cover;
+header .user_util .search {
+   width: 2.5rem;height: 2.5rem;
+   background: url(../img/icon_search.png) center / contain no-repeat;
    /* border: 2px solid rgba(250,118,114,0.3); */
 }
-.header_wrap .user_util .login {
-   width: 3rem;height: 3rem;
+header .search_modal {display: none;}
+header .search_modal.show {
+   display: flex;align-items: center;
+   position: absolute;top: -1.2rem;right: 4.8rem;
+   /* border: 1px solid #000 */
+}
+header form {
+   display: flex;gap: 1rem;
+   padding: 1rem;
+}
+header form input {
+   display: block;
+   background: rgba(225,225,225,0.0);
+   border-bottom: 1px solid #3e3e3e;
+}
+
+header .search_close {width: 3rem;height: 3rem;}
+
+header .user_util .login {
+   width: 2.5rem;height: 2.5rem;
    background: url(../img/login.svg) no-repeat center;
    background-size: cover;
    /* border: 2px solid rgba(250,118,114,0.3); */
@@ -177,7 +199,7 @@ header .blur_bg {
       flex-shrink: 0;width: 100vw;background: center / cover no-repeat;}
    .main_visual li:nth-child(1) {background-image: url(../img/main_visual_06.gif);}
    .main_visual li:nth-child(2) {background-image: url(../img/main_visual_03.jpg);}
-   .main_visual li:nth-child(3) {background-image: url(../img/main_visual_01.jpg);}
+   .main_visual li:nth-child(1) {background-image: url(../img/main_visual_01.jpg);}
    .main_visual li:nth-child(4) {background-image: url(../img/main_visual_04.jpg);}
    .main_visual li:nth-child(5) {background-image: url(../img/main_visual_02.jpg);}
 
@@ -216,6 +238,7 @@ header .blur_bg {
       margin: 20rem auto;
       /* background: red; */
    }
+   
    .service_icons li {
       display: flex;flex-direction: column;align-items: center;justify-content: center;gap: 0.5rem;
       width: 100%;height: 100%;
