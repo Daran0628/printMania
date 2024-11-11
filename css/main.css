@@ -234,7 +234,7 @@ header .blur_bg {
 
    .service_icons .icon_wrap {
       display: flex;justify-content: center;align-items: center;
-      width: 75%;height: auto;
+      width: 85%;height: auto;
       margin: 20rem auto;
       /* background: red; */
    }
@@ -245,12 +245,12 @@ header .blur_bg {
       /* border: 1px solid blue */
    }
    .service_icons img {
-      width: 8rem;height: 8rem;
-      margin-bottom: 1rem;}
+      width: 6rem;height: 6rem;
+      margin-bottom: 1.5rem;}
    .service_icons span {
-      font-size: 1.8rem;font-weight: 700;color: #2F4F96;}
+      font-size: 2.4rem;font-weight: 700;color: #2F4F96;}
    .service_icons p {
-      font-size: 1.4rem;text-align: center;}
+      font-size: 1.6rem;text-align: center;}
 
 
 
